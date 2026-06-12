@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SunTech</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* SECCIONES */
+section {
+    min-height: 100vh;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* HERO */
+.hero {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff7b00, #ff0000);
+    color: white;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: white;
+    color: red;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* VIDEO */
+.video {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+video {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* FONDOS */
+#catalogo, #quienes {
+    background: linear-gradient(135deg, #ff7b00, #ff0000);
+    color: white;
+}
+
+#redes, #contacto {
+    background: #111;
+    color: white;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    color: black;
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.card button {
+    background: orange;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: red;
+}
+
+/* COLLAGE */
+.collage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.collage img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #25D366;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ANIMACIÓN */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s;
+}
+
+.fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#quienes">Nosotros</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#redes">Redes</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<!-- INICIO -->
+<section id="inicio">
+    <div class="hero">
+        <h1>SunTech ☀️</h1>
+        <p>El futuro de la cocina está en el sol</p>
+        <a href="#catalogo" class="btn">Ver catálogo</a>
+    </div>
+
+    <div class="video">
+        <video controls>
+            <source src="img/11.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="quienes" class="fade">
+    <h2>¿Quiénes somos?</h2>
+    <p>Somos una empresa enfocada en innovación sustentable.</p>
+
+    <div class="collage">
+        <img src="img/1.jpg">
+        <img src="img/2.jpg">
+        <img src="img/3.jpg">
+        <img src="img/4.jpg">
+    </div>
+</section>
+
+<!-- CATALOGO -->
+<section id="catalogo">
+    <h2>Catálogo</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Estufa Solar</h3>
+            <p>Alta eficiencia</p>
+            <button onclick="alert('Producto seleccionado')">Comprar</button>
+        </div>
+
+        <div class="card">
+            <h3>Masterclass</h3>
+            <p>Aprende fácil</p>
+            <button onclick="alert('Curso seleccionado')">Comprar</button>
+        </div>
+
+        <div class="card">
+            <h3>Food Service</h3>
+            <p>Servicio completo</p>
+            <button onclick="alert('Servicio seleccionado')">Reservar</button>
+        </div>
+    </div>
+
+    <div class="collage">
+        <img src="img/1.jpg">
+        <img src="img/2.jpg">
+        <img src="img/3.jpg">
+        <img src="img/4.jpg">
+    </div>
+</section>
+
+<!-- REDES -->
+<section id="redes" class="fade">
+    <h2>Redes Sociales</h2>
+    <p>📸 Instagram: @sun_tech_solar</p>
+    <p>📘 Facebook: Sun tech corporation</p>
+    <p>🎵 TikTok: @Sun_tech_corporation</p>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="fade">
+    <h2>Contáctanos</h2>
+    <p>📞 5533155042</p>
+
+    <a class="whatsapp" href="https://wa.me/525533155042" target="_blank">
+        Escríbenos por WhatsApp
+    </a>
+</section>
+
+<script>
+const fades = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+    fades.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            el.classList.add('visible');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
